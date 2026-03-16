@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :airport do
-    code { "MyString" }
+    sequence(:code) { |n| "AIR#{n.to_s.rjust(3, "0")}" }
     terminals { 1 }
     name { "Test Airport" }
   end

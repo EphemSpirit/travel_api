@@ -1,3 +1,4 @@
 class Airport < ApplicationRecord
-  validates :code, :terminals, :name, presence: true
+  validates :terminals, :name, presence: true
+  validates :code, presence: true, uniqueness: true
 end

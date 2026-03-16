@@ -16,5 +16,11 @@ RSpec.describe Airport, type: :model do
       airport = FactoryBot.build(:airport, name: nil)
       expect(airport).not_to be_valid
     end
+
+    it "is not valid with a dup'd code" do
+      FactoryBot.create(:airport, code: "DUP")
+      airport = FactoryBot.build(:airport, code: "DUP")
+      expect(airport).not_to be_valid
+    end
   end
 end
