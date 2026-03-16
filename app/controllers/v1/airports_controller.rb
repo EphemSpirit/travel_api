@@ -28,7 +28,7 @@ module V1
     private
 
     def airport_params
-      params.require(:airport).permit(:code, :name, :terminals)
+      params.require(:airport).permit(:code, :name, :terminals, :country, :city)
     end
   end
 end

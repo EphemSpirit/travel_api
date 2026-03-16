@@ -17,7 +17,7 @@ RSpec.describe "Airports API", type: :request do
 
   describe "POST /airports" do
     context "with valid parameters" do
-      let(:valid_params) { { airport: { code: "JFK", name: "John F. Kennedy International Airport", terminals: 5 } } }
+      let(:valid_params) { { airport: { code: "JFK", name: "John F. Kennedy International Airport", terminals: 5, city: "New York", country: "USA" } } }
 
       it "creates a new airport" do
         expect {
